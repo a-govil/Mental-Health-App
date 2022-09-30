@@ -141,7 +141,11 @@ class _MyLoginState extends State<MyLogin> {
                     TextButton(
                       onPressed:() {Navigator.pushNamed(context, 'signup');},
                       child:const Text('Sign Up',style: TextStyle(color: Color.fromARGB(255, 46, 53, 45), fontWeight: FontWeight.bold)))
-                      ,FadeAnimation(1.5, Text("Forgot Password?", style: TextStyle(color: Color.fromRGBO(97, 128, 106, 1)),)),
+                      ,//FadeAnimation(1.5, Text("Forgot Password?", style: TextStyle(color: Color.fromRGBO(97, 128, 106, 1)),)),
+                      TextButton(
+                      onPressed:() {Navigator.pushNamed(context, 'forgot');},
+                      child:const Text('Forgot Password?',style: TextStyle(color: Color.fromRGBO(97, 128, 106, 1), fontWeight: FontWeight.bold)))
+
 	                ],
 	              ),
 	            )
