@@ -133,7 +133,9 @@ class _MyLoginState extends State<MyLogin> {
 	                      )
 	                    ),
 	                    child: Center(
-	                      child: Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                        child: TextButton(
+                          onPressed:() {Navigator.pushNamed(context, 'home');},
+	                        child:const Text("Login",style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),)
 	                    ),
 	                  )),
 	                  SizedBox(height: 50,),
