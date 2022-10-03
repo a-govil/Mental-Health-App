@@ -1,1 +1,1 @@
-# Mental-Health-App
+# SEDO - Mental Health Tracker
