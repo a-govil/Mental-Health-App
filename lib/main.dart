@@ -1,9 +1,10 @@
-
 import 'package:flutter/material.dart';
-import 'package:day12_login/signup.dart';
-import 'package:day12_login/login.dart';
-import 'package:day12_login/forgot.dart';
-import 'package:day12_login/home.dart';
+import 'package:sedo/signup.dart';
+import 'package:sedo/login.dart';
+import 'package:sedo/forgot.dart';
+import 'package:sedo/home.dart';
+
+
 
 
 void main() {
@@ -16,7 +17,8 @@ void main() {
       'forgot': (context) => MyForgot(),
       'home': (context) => HomePage()
 
-      
+
+
     },
   ));
 }
