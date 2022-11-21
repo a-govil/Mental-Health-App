@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sedo/Animation/FadeAnimation.dart';
+//import 'package:sedo/Animation/FadeAnimation.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({ super.key });
@@ -31,46 +31,45 @@ class _MyLoginState extends State<MyLogin> {
                         left: 30,
                         width: 80,
                         height: 200,
-                        child: FadeAnimation(1, Container(
+                        child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage('assets/images/light-1.png')
                               )
                           ),
                         )),
-                      ),
                       Positioned(
                         left: 140,
                         width: 80,
                         height: 150,
-                        child: FadeAnimation(1.3, Container(
+                        child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage('assets/images/light-2.png')
                               )
                           ),
-                        )),
+                        ),
                       ),
                       Positioned(
                         right: 40,
                         top: 40,
                         width: 80,
                         height: 150,
-                        child: FadeAnimation(1.5, Container(
+                        child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage('assets/images/clock.png')
                               )
                           ),
                         )),
-                      ),
+                      
                       Positioned(
-                        child: FadeAnimation(1.6, Container(
+                        child: Container(
                           margin: EdgeInsets.only(top: 50),
                           child: Center(
                             child: Text("Login", style: TextStyle(color: Color.fromARGB(255, 227, 229, 226), fontSize: 40, fontWeight: FontWeight.bold),),
                           ),
-                        )),
+                        ),
                       )
                     ],
                   ),
@@ -79,7 +78,7 @@ class _MyLoginState extends State<MyLogin> {
                   padding: EdgeInsets.all(30.0),
                   child: Column(
                     children: <Widget>[
-                      FadeAnimation(1.8, Container(
+                      Container(
                         padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -119,9 +118,9 @@ class _MyLoginState extends State<MyLogin> {
                             )
                           ],
                         ),
-                      )),
+                      ),
                       SizedBox(height: 30,),
-                      FadeAnimation(2, Container(
+                      Container(
                         height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -137,7 +136,7 @@ class _MyLoginState extends State<MyLogin> {
                               onPressed:() {Navigator.pushNamed(context, 'home');},
                               child:const Text("Login",style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),)
                         ),
-                      )),
+                      ),
                       SizedBox(height: 50,),
                       Text("Do not have an account?"),
                       TextButton(

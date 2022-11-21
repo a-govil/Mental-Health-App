@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sedo/Animation/FadeAnimation.dart';
+//import 'package:sedo/Animation/FadeAnimation.dart';
 
 
 
@@ -30,13 +30,13 @@ class _MyForgotState extends State<MyForgot> {
                   child: Stack(
                     children: <Widget>[
                       Positioned(
-                        child: FadeAnimation(1.6, Container(
+                        child: Container(
                           //margin: EdgeInsets.only(top: 0),
                           child: Center(
                             child: Text("Forgot Password", style: TextStyle(color: Color.fromARGB(255, 227, 229, 226), fontSize: 30, fontWeight: FontWeight.bold),),
 
                           ),
-                        )),
+                        ),
                       ),
                       SizedBox(height: 30,),SizedBox(height: 30,),
 
@@ -51,7 +51,7 @@ class _MyForgotState extends State<MyForgot> {
 
                   child: Column(
                     children: <Widget>[
-                      FadeAnimation(1.8, Container(
+                      Container(
                         padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -83,9 +83,9 @@ class _MyForgotState extends State<MyForgot> {
 
                           ],
                         ),
-                      )),
+                      ),
                       SizedBox(height: 30,),
-                      FadeAnimation(2, Container(
+                      Container(
                         height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -99,7 +99,7 @@ class _MyForgotState extends State<MyForgot> {
                         child: Center(
                           child: Text("Send", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                         ),
-                      )),
+                      ),
                       SizedBox(height: 50,),
                       TextButton(
                           onPressed:() {Navigator.pushNamed(context, 'login');},

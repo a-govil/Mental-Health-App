@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sedo/Animation/FadeAnimation.dart';
+//import 'package:sedo/Animation/FadeAnimation.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({ super.key });
@@ -28,13 +28,13 @@ class _MyRegisterState extends State<MyRegister> {
                   child: Stack(
                     children: <Widget>[
                       Positioned(
-                        child: FadeAnimation(1.6, Container(
+                        child: Container(
                           margin: EdgeInsets.only(top: 0),
                           child: Center(
                             child: Text("Create Account", style: TextStyle(color: Color.fromARGB(255, 227, 229, 226), fontSize: 30, fontWeight: FontWeight.bold),),
                           ),
                         )),
-                      )
+                      
                     ],
                   ),
                 ),
@@ -42,7 +42,7 @@ class _MyRegisterState extends State<MyRegister> {
                   padding: EdgeInsets.all(30.0),
                   child: Column(
                     children: <Widget>[
-                      FadeAnimation(1.8, Container(
+                      Container(
                         padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -102,9 +102,9 @@ class _MyRegisterState extends State<MyRegister> {
                             )
                           ],
                         ),
-                      )),
+                      ),
                       SizedBox(height: 30,),
-                      FadeAnimation(2, Container(
+                      Container(
                         height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -118,7 +118,7 @@ class _MyRegisterState extends State<MyRegister> {
                         child: Center(
                           child: Text("Sign Up", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                         ),
-                      )),
+                      ),
                       SizedBox(height: 50,),
                       TextButton(
                           onPressed:() {Navigator.pushNamed(context, 'login');},
