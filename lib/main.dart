@@ -4,6 +4,7 @@ import 'package:sedo/signup.dart';
 import 'package:sedo/login.dart';
 import 'package:sedo/forgot.dart';
 import 'package:sedo/home.dart';
+import 'package:sedo/user.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 
@@ -16,12 +17,14 @@ void main() async {
 
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: MainPage(),
+    home: UserPage(),
     routes: {
       'signup': (context) => MyRegister(),
       'login': (context) => MyLogin(),
       'forgot': (context) => MyForgot(),
-      'home': (context) => HomePage()
+      'home': (context) => HomePage(),
+      'user': (context) => UserPage()
+
 
 
 

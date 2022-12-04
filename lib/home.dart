@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:sedo/profile.dart';
+import 'package:sedo/discover.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ super.key });
@@ -9,20 +11,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _MyHomePage extends State<HomePage> {
+  
   final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 206, 223, 204),
-      bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home,color: Color.fromARGB(255, 122, 142, 120),size: 35,),label: '',),
-            BottomNavigationBarItem(icon: Icon(Icons.newspaper,color: Color.fromARGB(255, 122, 142, 120),size: 35),label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.chat,color: Color.fromARGB(255, 122, 142, 120),size: 35),label: '')
-          ]),
+     
       body: SafeArea(
         child: Column(
           children: [
+
+
+              
+              MaterialButton(onPressed: (){
+                        FirebaseAuth.instance.signOut();
+                      },
+                    color: Colors.amber,
+                    child: Text('sign out'),
+                      ),
+
+          
+                      
             
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
