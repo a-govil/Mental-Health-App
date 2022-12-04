@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 //import 'package:sedo/Animation/FadeAnimation.dart';
 
@@ -9,6 +10,25 @@ class MyLogin extends StatefulWidget {
 }
 
 class _MyLoginState extends State<MyLogin> {
+  
+  //text controllers
+  final _emailController=TextEditingController();
+  final _passwordController=TextEditingController();
+  
+  Future signIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: _emailController.text.trim(), 
+      password: _passwordController.text.trim()
+    );
+  }
+  //dispose controllers for memory management
+  @override
+  void dispose(){
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,6 +119,7 @@ class _MyLoginState extends State<MyLogin> {
                                   border: Border(bottom: BorderSide(color: Color(0xD3D3D3)))
                               ),
                               child: TextField(
+                                controller: _emailController,
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: "Email or Phone number",
@@ -109,6 +130,8 @@ class _MyLoginState extends State<MyLogin> {
                             Container(
                               padding: EdgeInsets.all(8.0),
                               child: TextField(
+                                obscureText: true,
+                                controller: _passwordController,
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: "Password",
@@ -132,8 +155,9 @@ class _MyLoginState extends State<MyLogin> {
                             )
                         ),
                         child: Center(
-                            child: TextButton(
-                              onPressed:() {Navigator.pushNamed(context, 'home');},
+                            child: GestureDetector(
+                              onTap: signIn,
+                              //onPressed:() {Navigator.pushNamed(context, 'home');},
                               child:const Text("Login",style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),)
                         ),
                       ),

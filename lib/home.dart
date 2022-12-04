@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -8,6 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _MyHomePage extends State<HomePage> {
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +23,7 @@ class _MyHomePage extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: [
+            
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
               child: Column(
@@ -62,6 +65,8 @@ class _MyHomePage extends State<HomePage> {
 
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(0,0,5,17.0),
+
+                      
                       child: Icon(
                         Icons.notifications,
                         size: 40,
