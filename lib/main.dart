@@ -7,7 +7,10 @@ import 'package:sedo/home.dart';
 
 
 
-void main() {
+void main() async {
+  // access to native code
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: MyLogin(),
