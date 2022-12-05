@@ -22,12 +22,12 @@ class _MyLoginState extends State<MyLogin> {
     );
   }
   //dispose controllers for memory management
-  @override
-  void dispose(){
-    _emailController.dispose();
-    _passwordController.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose(){
+  //   _emailController.dispose();
+  //   _passwordController.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {

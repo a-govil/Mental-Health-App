@@ -17,20 +17,20 @@ class _MyHomePage extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 206, 223, 204),
-     
+      
       body: SafeArea(
         child: Column(
           children: [
 
 
               
-              MaterialButton(onPressed: (){
+              /*MaterialButton(onPressed: (){
                         FirebaseAuth.instance.signOut();
                       },
                     color: Colors.amber,
                     child: Text('sign out'),
-                      ),
-
+                      ),  */
+ 
           
                       
             

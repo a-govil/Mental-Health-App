@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:sedo/user.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({ super.key });
@@ -9,20 +11,27 @@ class ProfilePage extends StatefulWidget {
 
 
 class _MyProfilePage extends State<ProfilePage> {
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 206, 223, 204),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       
-          body: SafeArea(
-            child: 
-            Column(
-              children: [
-                Text('profile page'),
+           body: SafeArea(
+        child: Column(
+          children: [
 
-              ],
+
+              
+              MaterialButton(onPressed: (){
+                        FirebaseAuth.instance.signOut();
+                      },
+                    color: Colors.blueGrey,
+                    child: Text('sign out'),
+                      ), 
+          ]
               ),
-              ),
+    )
     );
   }
 }

@@ -30,11 +30,11 @@ class _MyUserPage extends State<UserPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: screens[currentIndex],
-      backgroundColor: Color.fromARGB(255, 206, 223, 204),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       bottomNavigationBar: BottomNavigationBar(
           
-          //showSelectedLabels: false,
-          //showUnselectedLabels: false,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           onTap: onTap,
           currentIndex: currentIndex,
           
